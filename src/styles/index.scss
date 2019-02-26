@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Ubuntu');
+
+@import "variables";
+@import "accordion";
+@import "_atelier-seaside-dark";
+
+body {
+  background: #fff;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.1rem;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+.code {
+  background: #111;
+  border: 1px solid #ccc !important;
+  border-radius: 8px;
+  padding: 1em !important;
+  font-size: 14px;
+  line-height: 1.5;
+  pre, code {
+    color: #f1f2f3;
+    margin: 0;
+  }
+}
+
+.intro {
+  height: 100vh;
+  color: #fff;
+  padding: 70px 0;
+  background-color: #23223b;
+  text-align: center;
+  position: relative;
+  .contents {
+    width: 100%;
+    top: 50%;
+    transform: translate(0,-50%);
+    position: absolute;
+  }
+  .intro-img { height: 60vh; }
+  .intro-title { margin-top: -50px; }
+  h1 {
+    margin-bottom: 1em;
+    .brand-name {
+      color: #ff5722;
+      font-family: Dosis,sans-serif;
+      font-weight: 600;
+    }
+  }
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#features {
+  .media {
+    img { width: 70px; }
+    p {
+      font-size: 0.9em;
+      text-align: justify;
+    }
+  }
+}
+
+.landing-section {
+  padding: 5em 0;
+
+  .landing-section-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    h1 {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    &:after {
+      content: '';
+      width: 100px;
+      height: 3px;
+      background-color: orangered;
+      display: inline-block;
+      position: relative;
+      bottom: 10px;
+    }
+  }
+}
+
+footer {
+  color: #7a7c91!important;
+  background-color: #312443;
+  background-image: url('/public/images/cosmonau.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding: 6em 0 5em;
+  font-size: 16px;
+
+  .footer-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #d7d7e0!important;
+    margin-bottom: 10px;
+  }
+  ul.footer-links {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+    a {
+      color: #7a7c91!important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid #343546;
+    padding: 27px 0 0 0;
+  }
+}
