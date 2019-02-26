@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis|Ubuntu');
 
 @import "variables";
+@import "bootstrap";
 @import "accordion";
 @import "_atelier-seaside-dark";
 
@@ -17,8 +18,11 @@ body {
 }
 
 a {
+  color: #312443;
   text-decoration: none;
+  transition: .3s;
   &:hover {
+    color: #7a7c91;
     text-decoration: none;
   }
 }
@@ -41,6 +45,19 @@ a {
   }
 }
 
+header {
+  .navbar {
+    transition: .3s;
+  }
+}
+.scrolled {
+  header {
+    .navbar {
+      background-color: #312443 !important;
+    }
+  }
+}
+
 .intro {
   height: 100vh;
   color: #fff;
@@ -54,15 +71,16 @@ a {
     transform: translate(0,-50%);
     position: absolute;
   }
-  .intro-img { height: 60vh; }
+  .intro-img {  }
   .intro-title { margin-top: -50px; }
   h1 {
-    margin-bottom: 1em;
-    .brand-name {
-      color: #ff5722;
-      font-family: Dosis,sans-serif;
-      font-weight: 600;
-    }
+    color: #ff5722;
+    //font-family: Dosis,sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }
 
@@ -110,7 +128,7 @@ footer {
   background-image: url('/public/images/cosmonau.png');
   background-position: right center;
   background-repeat: no-repeat;
-  padding: 6em 0 5em;
+  padding: 4em 0 3em;
   font-size: 16px;
 
   .footer-title {
@@ -134,5 +152,30 @@ footer {
   .copyright {
     border-top: 1px solid #343546;
     padding: 27px 0 0 0;
+  }
+  .socials {
+    a {
+      color: #fff;
+      font-size: 2em;
+      margin-right: .5em;
+
+      &:hover {
+        color: #7a7c91!important;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $screen-xxs-max) {
+  .intro {
+    .intro-title { margin-top: -35px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+  }
+}
+@media (max-width: $screen-sm-min) {
+  footer {
+    background-image: none;
   }
 }

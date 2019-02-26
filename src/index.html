@@ -6,22 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>rocketpack Cloud Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.4.4/dist/css/ionicons.min.css">
 </head>
 <body>
 
-    <section class="intro">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">rocketpack</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <i class="icon ion-md-menu"></span> -->
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" data-scrollto="intro">home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scrollto="about">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scrollto="samples">documents</a>
+                    </li>
+                </ul>
+                <div class="my-2 my-lg-0">
+                    <a class="btn btn-outline-success" href="https://console.rocktpack.com/#/login">login</a>
+                    <a class="btn btn-outline-warning" href="https://console.rocktpack.com/#/register">register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="intro" class="intro">
         <div id="particles-js"></div>
         <div class="contents">
             <img class="intro-img img-fluid" src="/public/images/rocketman.png" />
             <div class="intro-title">
-                <h1>
-                    <span class="brand-name">R0CK3T P4CK</span><br />
-                    Fly to the sky
-                </h1>
+                <h1 class="brand-name">*********</h1>
+                <h2 class="slogan mb-4">Fly to the sky</h2>
                 <p>
-                    <a class="btn btn-danger" data-scrollto="about">Get Started</a>
-                    <a class="btn btn-warning" data-scrollto="samples">Documents</a>
+                    <a class="btn btn-outline-danger" data-scrollto="about">Get Started</a>
+                    <a class="btn btn-outline-warning" data-scrollto="samples">Documents</a>
                 </p>
             </div>
         </div>
@@ -132,16 +158,16 @@
 
             <ul class="nav nav-pills nav-justified mb-3" id="v-pills-tab" role="tablist">
                 <li class="nav-item"><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Javascript</a></li>
-                <li class="nav-item"><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Android</a></li>
-                <li class="nav-item"><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">IOS</a></li>
-                <li class="nav-item"><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Python</a></li>
+                <li class="nav-item"><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="icon ion-logo-android"></i> Android</a></li>
+                <li class="nav-item"><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="icon ion-logo-apple"></i> IOS</a></li>
+                <li class="nav-item"><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="icon ion-logo-python"></i> Python</a></li>
                 <li class="nav-item"><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">C#</a></li>
             </ul>
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <h4>Installation</h4>
                     <div class="code ltr mb-3">
-                        <pre class="prettyprint linenums">$ npm install rocketpack.io --save</pre>
+                        <code class="prettyprint linenums">$ npm install rocketpack.io --save</code>
                     </div>
                     <h3 class="mt-4">Initialization</h3>
                     <div class="code ltr mb-3">
@@ -172,9 +198,15 @@
                         </code>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="alert alert-warning" role="alert">It's going to be available soon</div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="alert alert-warning" role="alert">It's going to be available soon</div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="alert alert-warning" role="alert">It's going to be available soon</div>
+                </div>
             </div>
         </div>
     </section>
@@ -221,22 +253,26 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-6">
-                            <div class="footer-title">Website</div>
+                            <div class="footer-title">website</div>
                             <ul class="footer-links">
-                                <li><a href="https://www.rocktpack.com/">Home</a></li>
-                                <li><a href="https://docs.rocktpack.com/">Documents</a></li>
+                                <li><a href="https://www.rocktpack.com/">home</a></li>
+                                <li><a href="https://docs.rocktpack.com/">documents</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
-                            <div class="footer-title">Developers</div>
+                            <div class="footer-title">developer console</div>
                             <ul class="footer-links">
-                              <li><a href="https://console.rocktpack.com/#/login">Signin</a></li>
-                              <li><a href="https://console.rocktpack.com/#/register">Signup</a></li>
+                              <li><a href="https://console.rocktpack.com/#/login">login</a></li>
+                              <li><a href="https://console.rocktpack.com/#/register">register</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="copyright">
-                        Made with <span style="color: #e25555;">❤</span> from Developers to Developers
+                    <div class="copyright mb-2">
+                        made with <span style="color: #e25555;">❤</span> from developers for developers
+                    </div>
+                    <div class="socials">
+                        <a href="https://github.com/rocketpack-ir"><i class="icon ion-logo-github"></i></a>
+                        <a href="https://www.linkedin.com/company/rocketpack-cloud-services/"><i class="icon ion-logo-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -249,5 +285,6 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/typeit@VERSION_NUMBER/dist/typeit.min.js"></script> -->
 </body>
 </html>

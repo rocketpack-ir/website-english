@@ -1,4 +1,5 @@
 import '../styles/index.scss';
+import { TextScramble } from './TextScramble';
 
 window.helpers = {
 
@@ -156,11 +157,49 @@ window.helpers = {
             },
             "retina_detect": true
           });
+    },
+
+    textScramble: function() {
+      const phrases = [
+        'rocketpack'
+      ];
+      const el = document.querySelector('.brand-name');
+      const fx = new TextScramble(el);
+      let counter = 0;
+      const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, 5000);
+        });
+        counter = (counter + 1) % phrases.length;
+      };
+      next();
+    },
+
+    sloganTyping: function() {
+      const instance = new TypeIt('.slogan', {
+        strings: ['Fly to the sky'],
+        //-- Other options...
+      }).go();
     }
 
-}
+};
 
-window.helpers.scrollTo();
-window.helpers.initAccordion();
-window.helpers.initDocumentsTabs();
-window.helpers.particles();
+$(function() {
+
+  window.helpers.scrollTo();
+  window.helpers.initAccordion();
+  window.helpers.initDocumentsTabs();
+  window.helpers.particles();
+  window.helpers.textScramble();
+  //window.helpers.sloganTyping();
+
+  // window scroll
+  var $body = $(document.body);
+  var $nav = $('header > nav');
+  var onScroll = function () {
+    $body.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  };
+  $(document).scroll(onScroll);
+  setTimeout(onScroll, 300);
+
+});
