@@ -8,10 +8,8 @@ window.helpers = {
         $('[data-scrollto]').on('click', function() {
             var id = '#' + $(this).data('scrollto');
             if ( $(id).length > 0 ) {
-                var offset = 0;
-                if ( $('.header').length ) {
-                    offset = $('.header').height();
-                }
+                var offset = id == '#intro' ? 0 : $('header > .navbar').outerHeight();
+                console.log('offset', offset)
                 $('html').animate({scrollTop: $(id).offset().top - offset}, 700);
             }
             return false;
